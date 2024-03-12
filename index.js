@@ -23,7 +23,7 @@ app.use("*", (req, res) => {
 
 // error handler
 app.use((err, req, res, next) => {
-    res.status(500).join({ message: err.message || "something went wrond" })
+    res.status(500).json({ message: err.message || "something went wrond" })
 })
 
 // db
